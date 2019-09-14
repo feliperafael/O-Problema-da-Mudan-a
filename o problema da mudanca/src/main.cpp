@@ -127,10 +127,10 @@ void constroi(posto** postos, posto** postosOrd, float *tanque, float* abastecim
     }
 }
 
-int main(){
+int main(int argc, char *argv[]){
 
 	read * data = new read();
-	posto ** postos =data->read_file("input/input_old.dat"); //Postos de gasolina são alocados dinamicamente
+	posto ** postos =data->read_file(argv[1]); //Postos de gasolina são alocados dinamicamente
 
 	
 	for( int i = 0; i < data->n_postos; i++)
